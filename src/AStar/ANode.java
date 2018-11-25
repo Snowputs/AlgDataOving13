@@ -7,7 +7,6 @@ public class ANode {
     double cosBredde;
     AStarKant førsteKant;
     public FørANode før;
-    int plassIHeap;
 
     public ANode(int plass, double breddegrad, double lengdegrad){
         this.plass = plass;

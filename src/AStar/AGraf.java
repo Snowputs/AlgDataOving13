@@ -146,7 +146,7 @@ class Testprogram {
             //System.out.println(g.veien(g.noder[startNode], g.noder[sluttNode]));   //Viser hvilke noder veien består av, fa start- til sluttnode.
 
             double tidBrukt = slutt.getTime() - start.getTime();
-            System.out.println("Tid brukt: " + tidBrukt + " ms");
+            System.out.println("Tid brukt: " + tidBrukt + "ms");
             System.out.println("Tid fra A til B: " + aGraf.noder[sluttNode].før.TimerMinutterOgSekunder());
             System.out.println("Antall noder sjekket: " + aGraf.noderSjekket);
 
