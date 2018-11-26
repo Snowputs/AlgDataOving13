@@ -36,7 +36,7 @@ public class DGraf {
 
     public void initForgj(DNode start){
         for (int i = 0; i < antNoder; i++){
-            noder[i].før = new FørDNode();
+            noder[i].før = new ForDNode();
         }
         start.før.totalvekt = 0;
         kø.add(start);
@@ -51,7 +51,7 @@ public class DGraf {
                 return;
             }
             for (DijkstraKant k = n.førsteKant; k != null; k = k.nesteKant){
-                FørDNode f = k.tilNode.før;
+                ForDNode f = k.tilNode.før;
                 if (f.totalvekt > (n.før.totalvekt + k.kjøretid)){
                     kø.remove(k.tilNode);
                     f.totalvekt = n.før.totalvekt + k.kjøretid;
@@ -87,7 +87,7 @@ public class DGraf {
 
     public String veien (DNode a, DNode b){
         String res = "";
-        FørDNode f = b.før;
+        ForDNode f = b.før;
         while (true){
             res = b.plass + "\n" + res;
             if (b.før.forgjenger.equals(a)){

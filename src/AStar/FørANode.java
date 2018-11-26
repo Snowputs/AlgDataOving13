@@ -8,17 +8,17 @@ public class FørANode {
     ANode forgjenger;
     static int uendelig = 1000000000;
 
-    public int finn_dist() {return tidFraStartNode;}
-    public ANode finn_forgj() {return forgjenger;}
     FørANode(){
         tidFraStartNode = uendelig;
     }
-    int totalVekt() {return tidFraStartNode + estTilSluttNode;}
+    int totalVekt() {
+        return tidFraStartNode + estTilSluttNode;
+    }
 
     public void estimerTidTilSluttNode(ANode start, ANode slutt) {
         double sinBredde = Math.sin((start.breddegradRad - slutt.breddegradRad)/2.0);
         double sinLengde = Math.sin((start.lengdegradRad - slutt.lengdegradRad)/2.0);
-        int estimo = 41701091;   //2*6371/110*3600*100 (2r / høyeste fartsgrense * antall sekunder i time * 100 (for hundredels sekunder :))
+        int estimo = 41701091;
         estTilSluttNode = (int) (estimo * Math.asin(Math.sqrt(sinBredde * sinBredde + start.cosBredde * slutt.cosBredde * sinLengde * sinLengde)));
     }
 

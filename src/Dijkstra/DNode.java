@@ -5,7 +5,7 @@ public class DNode {
     double breddegrad;
     double lengdegrad;
     DijkstraKant førsteKant;
-    public FørDNode før;
+    public ForDNode før;
     int plassIHeap;
 
     public DNode(int plass, double breddegrad, double lengdegrad){

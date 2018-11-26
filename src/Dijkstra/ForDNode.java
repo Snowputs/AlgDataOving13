@@ -2,15 +2,13 @@ package Dijkstra;
 
 import java.util.concurrent.TimeUnit;
 
-public class FørDNode {
+public class ForDNode {
     int totalvekt;
     DNode forgjenger;
     boolean aldriVærtIKø = true;
     static int uendelig = 1000000000;
 
-    public int finn_dist() {return totalvekt;}
-    public DNode finn_forgj() {return forgjenger;}
-    public FørDNode(){
+    public ForDNode(){
         totalvekt = uendelig;
     }
 

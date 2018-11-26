@@ -56,7 +56,8 @@ public class AGraf {
                 FørANode f = k.tilNode.før;
                 if (f.tidFraStartNode > (n.før.tidFraStartNode + k.kjøretid)) {
                     if (!kø.remove(k.tilNode)) {
-                        k.tilNode.før.estimerTidTilSluttNode(k.tilNode, b);     //Legger til estimat for noden for å putte den i kø
+                        //Estimated time to end node
+                        k.tilNode.før.estimerTidTilSluttNode(k.tilNode, b);
                     }
                     f.tidFraStartNode = n.før.tidFraStartNode + k.kjøretid;
                     f.forgjenger = n;
